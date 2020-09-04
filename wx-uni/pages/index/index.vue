@@ -16,9 +16,9 @@
 
 		},
 		methods: {
-click(){
-	console.log('222222222');
-}
+			click(){
+				console.log('222222222');
+			}
 		}
 	}
 </script>
