@@ -1,5 +1,5 @@
 <template>
-	<view class="">
+	<view class="cdata">
 		联系我们
 	</view>
 </template>
@@ -7,5 +7,8 @@
 <script>
 </script>
 
-<style>
+<style lang="scss">
+	.cdata{
+		color: $uni-color-primary
+	}
 </style>
