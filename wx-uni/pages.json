@@ -7,7 +7,7 @@
 				"navigationBarBackgroundColor":"#007AFF",
 				"h5":{
 					"pullToRefresh":{
-						"color":"#7d26cd"
+						"color":"#007AFF"
 					}
 				}
 			}
@@ -17,15 +17,49 @@
 			"style": {
 				"navigationBarTitleText": "test"
 			}
+		},
+		{
+			"path": "pages/contact/contact",
+			"style": {
+				"navigationBarTitleText": "联系我们"
+			}
+		},
+		{
+			"path": "pages/detail/detail",
+			"style": {
+				"navigationBarTitleText": "详情页"
+			}
 		}
   ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "test",
-		"navigationBarBackgroundColor": "#dfdef2",
+		"navigationBarBackgroundColor": "#007AFF",
 		"backgroundColor": "#4d782f",
 		"enablePullDownRefresh":true,
 		"backgroundTextStyle":"light",
 		"onReachBottomDistance":100
+	},
+	"tabBar":{
+		"color":"#a052dd",
+		"selectedColor":"#4CD964",
+		"backgroundColor":"#C0C0C0",
+		"borderStyle":"white",
+		"list":[
+			{"text":"首页","pagePath":"pages/index/index","iconPath":"static/tabs/home.png","selectedIconPath":"static/tabs/home-active.png"},
+			{"text":"信息","pagePath":"pages/message/message","iconPath":"static/tabs/message.png","selectedIconPath":"static/tabs/message-active.png"},
+			{"text":"我们","pagePath":"pages/contact/contact","iconPath":"static/tabs/contact.png","selectedIconPath":"static/tabs/contact-active.png"}
+		]
+	},
+	"condition":{
+		"current":{
+			"list":[
+				{
+					"name":"详情页",
+					"path":"pages/detail/detail",
+					"query":"id=80"
+				}
+			]
 		}
+	}
 }
