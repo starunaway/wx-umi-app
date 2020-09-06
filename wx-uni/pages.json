@@ -1,5 +1,17 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	{
+		"path": "pages/index/index",
+		"style": {
+			"navigationBarTitleText": "test"
+		}
+	},
+	{
+		"path": "pages/home/home",
+		"style": {
+			"navigationBarTitleText": "home"
+		}
+	},
 		{
 			"path" : "pages/message/message",
 			"style" : {
@@ -10,12 +22,6 @@
 						"color":"#007AFF"
 					}
 				}
-			}
-		},
-		{
-			"path": "pages/index/index",
-			"style": {
-				"navigationBarTitleText": "test"
 			}
 		},
 		{

@@ -12,9 +12,20 @@
 				test:'test'
 			}
 		},
-		onLoad() {
-
+		onLoad(options) {
+			console.log("index load",options)
 		},
+
+		onShow() {
+			console.log("index show")
+		},
+		onReady() {
+			console.log("index ready")
+		},
+		onHide() {
+			console.log("index hide")
+		},
+		
 		methods: {
 			click(){
 				console.log('222222222');

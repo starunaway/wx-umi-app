@@ -1,5 +1,6 @@
 <script>
 	export default {
+		// 这是应用的生命周期，全局只触发一次
 		onLaunch: function() {
 			console.log('App Launch')
 		},
