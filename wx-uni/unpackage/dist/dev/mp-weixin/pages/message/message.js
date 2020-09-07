@@ -128,7 +128,13 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -144,7 +150,47 @@ var _default =
 
 
   },
-  methods: {} };exports.default = _default;
+  methods: {
+    setStorage: function setStorage() {
+      uni.setStorage({
+        data: 80,
+        key: 'id',
+        success: function success() {
+          console.log('set successs');
+        } });
+
+    },
+
+    getStorage: function getStorage() {
+      uni.getStorage({
+        key: "id",
+        success: function success(res) {
+          console.log("获取成功", res);
+        } });
+
+    },
+
+    setStorageSync: function setStorageSync() {
+      uni.setStorageSync("id", { key: "id", value: '200' });
+    },
+    getStorageSync: function getStorageSync() {
+      var res = uni.getStorageSync("id");
+      console.log("getStorageSync", res);
+    },
+
+    removeId: function removeId() {
+      uni.removeStorage({
+        key: "id",
+        success: function success() {
+          console.log("删除成功");
+        } });
+
+    },
+
+    removeIdSync: function removeIdSync() {
+      uni.removeStorageSync("id");
+    } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ })
 
