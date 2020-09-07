@@ -2,7 +2,7 @@
 	<view>
 			message
 	
-	<view class="iconfont icon-tupian"></view>
+	<view class="iconfont icon-icon_zhanghao"></view>
 	</view>
 	
 </template>
