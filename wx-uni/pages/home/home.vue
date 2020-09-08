@@ -13,8 +13,8 @@
 				message:'hello'
 			}
 		},
-		onLoad() {
-			
+		onLoad(options) {
+			console.log("home load",options);
 		},
 	}
 </script>

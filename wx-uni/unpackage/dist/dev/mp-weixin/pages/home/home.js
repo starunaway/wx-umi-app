@@ -143,8 +143,8 @@ var _default =
       message: 'hello' };
 
   },
-  onLoad: function onLoad() {
-
+  onLoad: function onLoad(options) {
+    console.log("home load", options);
   } };exports.default = _default;
 
 /***/ })

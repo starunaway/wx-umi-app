@@ -1,6 +1,10 @@
 <template>
-	<view :class="test" @click="click">
-		hhhh
+	<view :class="test" >
+		<text @click="click">test</text>
+		<navigator url="/pages/contact/contact" open-type="switchTab">跳转到contract</navigator>
+		<navigator url="/pages/home/home?id=80">跳转到home</navigator>
+		<button @click="toDetail" type="default">跳转到detail</button>
+		<button @click="toMessage" type="default">跳转到Message</button>
 	</view>
 </template>
 
@@ -29,6 +33,16 @@
 		methods: {
 			click(){
 				console.log('222222222');
+			},
+			toDetail(){
+				uni.navigateTo({
+					url:'/pages/detail/detail'
+				})
+			},
+			toMessage(){
+				uni.switchTab({
+					url:"/pages/message/message"
+				})
 			}
 		}
 	}
