@@ -135,17 +135,22 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var Test = function Test() {__webpack_require__.e(/*! require.ensure | components/Test */ "components/Test").then((function () {return resolve(__webpack_require__(/*! ../../components/Test.vue */ 48));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   data: function data() {
     return {
@@ -153,6 +158,7 @@ var _default =
       test: 'test' };
 
   },
+  components: { Test: Test },
   onLoad: function onLoad(options) {
     console.log("index load", options);
   },

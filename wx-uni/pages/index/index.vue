@@ -5,10 +5,15 @@
 		<navigator url="/pages/home/home?id=80">跳转到home</navigator>
 		<button @click="toDetail" type="default">跳转到detail</button>
 		<button @click="toMessage" type="default">跳转到Message</button>
+		<Test></Test>
 	</view>
 </template>
 
 <script>
+	
+	import Test from "../../components/Test.vue"
+	
+	
 	export default {
 		data() {
 			return {
@@ -16,6 +21,7 @@
 				test:'test'
 			}
 		},
+		components:{Test},
 		onLoad(options) {
 			console.log("index load",options)
 		},
