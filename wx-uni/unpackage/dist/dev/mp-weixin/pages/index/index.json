@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "test",
   "usingComponents": {
-    "test": "/components/Test"
+    "test": "/components/Test",
+    "test2": "/components/Test2"
   }
 }
