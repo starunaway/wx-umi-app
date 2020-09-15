@@ -14,6 +14,7 @@
 	
 	import Test from "../../components/Test.vue"
 	import Test2 from "../../components/Test2.vue"
+	import fetch from "../../api/fetch.js"
 	
 	export default {
 		data() {
@@ -30,8 +31,11 @@
 		onShow() {
 			console.log("index show")
 		},
-		onReady() {
+		async onReady() {
 			console.log("index ready")
+			let result =  await fetch.get("https://dog.ceo/api/breeds/image/random")
+			
+			console.log('fetch result',result);
 		},
 		onHide() {
 			console.log("index hide")
