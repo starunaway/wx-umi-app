@@ -7,6 +7,13 @@
 		<button @click="toMessage" type="default">跳转到Message</button>
 		<Test></Test>
 		<Test2></Test2>
+		   <uni-calendar 
+		    :insert="true"
+		    :lunar="true" 
+		    :start-date="'2019-3-2'"
+		    :end-date="'2019-5-20'"
+		    @change="change"
+		     />
 	</view>
 </template>
 
@@ -14,6 +21,7 @@
 	
 	import Test from "../../components/Test.vue"
 	import Test2 from "../../components/Test2.vue"
+	import uniCalendar from '@/components/uni-calendar/uni-calendar.vue'
 	import fetch from "../../api/fetch.js"
 	
 	export default {
@@ -23,7 +31,7 @@
 				test:'test'
 			}
 		},
-		components:{Test,Test2},
+		components:{Test,Test2,uniCalendar},
 		onLoad(options) {
 			console.log("index load",options)
 		},
@@ -55,6 +63,9 @@
 				uni.switchTab({
 					url:"/pages/message/message"
 				})
+			},
+			change(){
+				console.log("date change");
 			}
 		}
 	}
