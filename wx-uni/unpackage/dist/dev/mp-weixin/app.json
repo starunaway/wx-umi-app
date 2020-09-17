@@ -1,47 +1,45 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/home/home",
-    "pages/message/message",
-    "pages/contact/contact",
-    "pages/detail/detail"
+    "pages/cart/cart",
+    "pages/member/member",
+    "pages/news/news"
   ],
   "subPackages": [],
   "window": {
     "navigationBarTextStyle": "white",
-    "navigationBarTitleText": "test",
-    "navigationBarBackgroundColor": "#007AFF",
-    "backgroundColor": "#4d782f",
-    "enablePullDownRefresh": true,
-    "backgroundTextStyle": "light",
-    "onReachBottomDistance": 100
+    "navigationBarTitleText": "商城",
+    "navigationBarBackgroundColor": "#b50e03"
   },
   "tabBar": {
-    "color": "#a052dd",
-    "selectedColor": "#4CD964",
-    "backgroundColor": "#C0C0C0",
-    "borderStyle": "white",
+    "color": "#ccc",
+    "selectedColor": "#b50e03",
     "list": [
       {
         "text": "首页",
         "pagePath": "pages/index/index",
-        "iconPath": "static/tabs/home.png",
-        "selectedIconPath": "static/tabs/home-active.png"
+        "iconPath": "static/icon/home.png",
+        "selectedIconPath": "static/icon/home-active.png"
       },
       {
-        "text": "信息",
-        "pagePath": "pages/message/message",
-        "iconPath": "static/tabs/message.png",
-        "selectedIconPath": "static/tabs/message-active.png"
+        "text": "资讯",
+        "pagePath": "pages/news/news",
+        "iconPath": "static/icon/news.png",
+        "selectedIconPath": "static/icon/news-active.png"
       },
       {
-        "text": "我们",
-        "pagePath": "pages/contact/contact",
-        "iconPath": "static/tabs/contact.png",
-        "selectedIconPath": "static/tabs/contact-active.png"
+        "text": "购物车",
+        "pagePath": "pages/cart/cart",
+        "iconPath": "static/icon/cart.png",
+        "selectedIconPath": "static/icon/cart-active.png"
+      },
+      {
+        "text": "会员",
+        "pagePath": "pages/member/member",
+        "iconPath": "static/icon/member.png",
+        "selectedIconPath": "static/icon/member-active.png"
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap49.json"
+  "usingComponents": {}
 }
