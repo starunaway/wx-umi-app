@@ -1,5 +1,11 @@
 <template>
-  <view class=""> 首页 </view>
+  <view class="home">
+    <swiper :indicator-dots="true" :circular="true" :autoplay="true" :interval="3000" :duration="1000">
+      <swiper-item v-for="item in swipers" :key="item.id">
+        <view class="swiper-item">{{ item.id }}</view>
+      </swiper-item>
+    </swiper>
+  </view>
 </template>
 
 <script>
@@ -18,8 +24,18 @@ export default {
         });
       } else {
         //   this.swipers = result.data.swipers
-        this.swipers = [];
       }
+      this.swipers = [
+        {
+          id: 1,
+        },
+        {
+          id: 2,
+        },
+        {
+          id: 3,
+        },
+      ];
     },
   },
   onLoad() {
@@ -27,3 +43,11 @@ export default {
   },
 };
 </script>
+<style lang="scss">
+.home {
+  swiper {
+    width: 750rpx;
+    height: 380rpx;
+  }
+}
+</style>
