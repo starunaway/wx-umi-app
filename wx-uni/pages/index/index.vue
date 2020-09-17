@@ -23,8 +23,8 @@ export default {
       }
     },
   },
-	onLoad() {
-		this.getSwipers()
-	}
+  onLoad() {
+    this.getSwipers();
+  },
 };
 </script>

@@ -8616,17 +8616,16 @@ if (hadRuntime) {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator */ 17));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(n);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}function _iterableToArrayLimit(arr, i) {if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}function fetch() {
-
-}
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator */ 17));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(n);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}function _iterableToArrayLimit(arr, i) {if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}function fetch() {}
 
 fetch.get = /*#__PURE__*/function () {var _ref = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee(url) {var _yield$uni$request, _yield$uni$request2, error, res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
               uni.request({
                 url: url,
-                method: "GET" }));case 2:_yield$uni$request = _context.sent;_yield$uni$request2 = _slicedToArray(_yield$uni$request, 2);error = _yield$uni$request2[0];res = _yield$uni$request2[1];return _context.abrupt("return",
+                method: 'GET' }));case 2:_yield$uni$request = _context.sent;_yield$uni$request2 = _slicedToArray(_yield$uni$request, 2);error = _yield$uni$request2[0];res = _yield$uni$request2[1];return _context.abrupt("return",
 
             {
-              error: error, res: res });case 7:case "end":return _context.stop();}}}, _callee);}));return function (_x) {return _ref.apply(this, arguments);};}();
+              error: error,
+              res: res });case 7:case "end":return _context.stop();}}}, _callee);}));return function (_x) {return _ref.apply(this, arguments);};}();
 
 
 
@@ -8634,11 +8633,12 @@ fetch.post = /*#__PURE__*/function () {var _ref2 = _asyncToGenerator( /*#__PURE_
               uni.request({
                 url: url,
                 data: params,
-                method: "POST" }));case 2:_yield$uni$request3 = _context2.sent;_yield$uni$request4 = _slicedToArray(_yield$uni$request3, 2);error = _yield$uni$request4[0];res = _yield$uni$request4[1];return _context2.abrupt("return",
+                method: 'POST' }));case 2:_yield$uni$request3 = _context2.sent;_yield$uni$request4 = _slicedToArray(_yield$uni$request3, 2);error = _yield$uni$request4[0];res = _yield$uni$request4[1];return _context2.abrupt("return",
 
 
             {
-              error: error, res: res });case 7:case "end":return _context2.stop();}}}, _callee2);}));return function (_x2, _x3) {return _ref2.apply(this, arguments);};}();
+              error: error,
+              res: res });case 7:case "end":return _context2.stop();}}}, _callee2);}));return function (_x2, _x3) {return _ref2.apply(this, arguments);};}();
 
 
 
@@ -8646,11 +8646,12 @@ fetch.put = /*#__PURE__*/function () {var _ref3 = _asyncToGenerator( /*#__PURE__
               uni.request({
                 url: url,
                 data: params,
-                method: "PUT" }));case 2:_yield$uni$request5 = _context3.sent;_yield$uni$request6 = _slicedToArray(_yield$uni$request5, 2);error = _yield$uni$request6[0];res = _yield$uni$request6[1];return _context3.abrupt("return",
+                method: 'PUT' }));case 2:_yield$uni$request5 = _context3.sent;_yield$uni$request6 = _slicedToArray(_yield$uni$request5, 2);error = _yield$uni$request6[0];res = _yield$uni$request6[1];return _context3.abrupt("return",
 
 
             {
-              error: error, res: res });case 7:case "end":return _context3.stop();}}}, _callee3);}));return function (_x4, _x5) {return _ref3.apply(this, arguments);};}();
+              error: error,
+              res: res });case 7:case "end":return _context3.stop();}}}, _callee3);}));return function (_x4, _x5) {return _ref3.apply(this, arguments);};}();
 
 
 
@@ -8658,11 +8659,12 @@ fetch.delete = /*#__PURE__*/function () {var _ref4 = _asyncToGenerator( /*#__PUR
               uni.request({
                 url: url,
                 data: params,
-                method: "DELETE" }));case 2:_yield$uni$request7 = _context4.sent;_yield$uni$request8 = _slicedToArray(_yield$uni$request7, 2);error = _yield$uni$request8[0];res = _yield$uni$request8[1];return _context4.abrupt("return",
+                method: 'DELETE' }));case 2:_yield$uni$request7 = _context4.sent;_yield$uni$request8 = _slicedToArray(_yield$uni$request7, 2);error = _yield$uni$request8[0];res = _yield$uni$request8[1];return _context4.abrupt("return",
 
 
             {
-              error: error, res: res });case 7:case "end":return _context4.stop();}}}, _callee4);}));return function (_x6, _x7) {return _ref4.apply(this, arguments);};}();var _default =
+              error: error,
+              res: res });case 7:case "end":return _context4.stop();}}}, _callee4);}));return function (_x6, _x7) {return _ref4.apply(this, arguments);};}();var _default =
 
 
 
