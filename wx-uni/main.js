@@ -1,7 +1,10 @@
 import Vue from 'vue'
 import App from './App'
+import fetch from './api/fetch.js'
 
 Vue.config.productionTip = false
+
+Vue.prototype.$fetch = fetch
 
 App.mpType = 'app'
 //  Cannot read property 'forceUpdate' of undefined -> 需要给微信小程序一个appid

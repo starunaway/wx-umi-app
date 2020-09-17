@@ -3,7 +3,6 @@
 </template>
 
 <script>
-import fetch from '../../api/fetch.js';
 export default {
   data() {
     return {
@@ -12,7 +11,7 @@ export default {
   },
   methods: {
     async getSwipers() {
-      let result = await fetch.get('https://dog.ceo/api/breeds/image/random');
+      let result = this.$fetch.get('https://dog.ceo/api/breeds/image/random');
       if (((result || {}).data || {}).status !== 0) {
         uni.showToast({
           title: '获取数据失败',
