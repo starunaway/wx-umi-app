@@ -33,15 +33,15 @@
     <view class="hot_goods">
       <view class="tit"> 推荐商品 </view>
 
-      <view class="goods_list">
-        <view class="goods_item">
-          <image src="https://images.dog.ceo/breeds/bulldog-boston/n02096585_942.jpg" mode=""></image>
+      <view class="goods_list" >
+        <view class="goods_item" v-for="item in goods" :key="item.id"> 
+          <image :src="item.img_url" mode=""></image>
 					<view class="price">
-						<text>$199</text>
-						<text>$299</text>
+						<text>{{item.sell_price}}</text>
+						<text>{{item.market_price}}</text>
 					</view>
 					<view class="name">
-						<text>描述描述描述述描述述描述描述描述</text>
+						<text>{{item.title}}</text>
 					</view>
         </view>
       </view>
@@ -54,6 +54,7 @@ export default {
   data() {
     return {
       swipers: [],
+			goods:[]
     };
   },
   methods: {
@@ -81,9 +82,49 @@ export default {
         },
       ];
     },
-  },
+  
+		async getGoods(){
+			this.goods = [
+				{
+					id:1,
+					title:"是大家看法和精神的",
+					add_time:"2020-09-05 15:14:26",
+					zhaiyao:"摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要是大家看法和精神的摘要",
+					click:0,
+					img_url:"https://images.dog.ceo/breeds/akita/Akina_Inu_in_Riga_1.jpg",
+					sell_price:2195,
+					market_price:2999,
+					stock_quantity:60
+				},
+				{
+					id:2,
+					title:"士大夫即将开始的",
+					add_time:"2020-09-07 15:14:26",
+					zhaiyao:"摘要摘要士大夫即将开始的看法和精神的摘要",
+					click:0,
+					img_url:"https://images.dog.ceo/breeds/basenji/n02110806_4792.jpg",
+					sell_price:699,
+					market_price:899,
+					stock_quantity:60
+				},
+				{
+					id:3,
+					title:"山豆根山豆根公司的分为五山豆根山豆根公司的分为五",
+					add_time:"2020-09-06 15:14:26",
+					zhaiyao:"摘要摘要摘豆根山豆根公司的分为豆根山豆根公司的分为是大家看法和精神的摘要",
+					click:0,
+					img_url:"https://images.dog.ceo/breeds/terrier-scottish/n02097298_3641.jpg",
+					sell_price:215,
+					market_price:299,
+					stock_quantity:60
+				},
+			]
+		}
+	},
   onLoad() {
     this.getSwipers();
+		
+		this.getGoods()
   },
 };
 </script>
@@ -133,14 +174,15 @@ export default {
     }
 	.goods_list{
 		padding: 0 15rpx;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
 		.goods_item{
 			background-color: #fff;
 			width: 355rpx;
-			display: flex;
-			flex-wrap: wrap;
 			padding: 15rpx;
 			box-sizing: border-box;
-			justify-content: space-between;
+			margin: 6rpx 0;
 			image{
 				width: 80%;
 				height: 150px;
@@ -150,6 +192,7 @@ export default {
 			.price{
 				color: $shop-color;
 				font-size: 36rpx;
+				margin: 20rpx 0 0 0;
 				text:nth-child(2){
 					color: #ccc;
 					font-size: 28rpx;
