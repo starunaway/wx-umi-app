@@ -9,52 +9,55 @@
     </swiper>
 
     <view class="nav">
-      <view class="nav_item">
-        <view class="iconfont icon-ziyuan"> </view>
-        <text>超市</text>
-      </view>
-
-      <view class="nav_item">
-        <view class="iconfont icon-guanyuwomen"> </view>
-        <text>联系我们</text>
-      </view>
-
-      <view class="nav_item">
-        <view class="iconfont icon-tupian"> </view>
-        <text>社区图片</text>
-      </view>
-
-      <view class="nav_item">
-        <view class="iconfont icon-shipin"> </view>
-        <text>学习视频</text>
+      <view class="nav_item" v-for="item in navs" :key="item.text" @click="navItemClick(item)">
+        <view :class="item.icon"> </view>
+        <text>{{ item.text }}</text>
       </view>
     </view>
 
     <view class="hot_goods">
       <view class="tit"> 推荐商品 </view>
 
-      <view class="goods_list" >
-        <view class="goods_item" v-for="item in goods" :key="item.id"> 
-          <image :src="item.img_url" mode=""></image>
-					<view class="price">
-						<text>{{item.sell_price}}</text>
-						<text>{{item.market_price}}</text>
-					</view>
-					<view class="name">
-						<text>{{item.title}}</text>
-					</view>
-        </view>
-      </view>
+      <goodList :goods="goods"></goodList>
     </view>
   </view>
 </template>
 
 <script>
+import goodList from '../../components/goods-list';
+import {mockGoods} from '../../mockData/data.js';
+
 export default {
+  components: {
+    goodList,
+  },
+
   data() {
     return {
       swipers: [],
-			goods:[]
+      goods: [],
+      navs: [
+        {
+          icon: 'iconfont icon-ziyuan',
+          text: '我的超市',
+          path: '/pages/goods/goods',
+        },
+        {
+          icon: 'iconfont icon-guanyuwomen',
+          text: '联系我们',
+          path: '/pages/contact/contact',
+        },
+        {
+          icon: 'iconfont icon-tupian',
+          text: '社区图片',
+          path: '/pages/pics/pics',
+        },
+        {
+          icon: 'iconfont icon-shipin',
+          text: '学习视频',
+          path: '/pages/videos/videos',
+        },
+      ],
     };
   },
   methods: {
@@ -82,49 +85,23 @@ export default {
         },
       ];
     },
-  
-		async getGoods(){
-			this.goods = [
-				{
-					id:1,
-					title:"是大家看法和精神的",
-					add_time:"2020-09-05 15:14:26",
-					zhaiyao:"摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要是大家看法和精神的摘要",
-					click:0,
-					img_url:"https://images.dog.ceo/breeds/akita/Akina_Inu_in_Riga_1.jpg",
-					sell_price:2195,
-					market_price:2999,
-					stock_quantity:60
-				},
-				{
-					id:2,
-					title:"士大夫即将开始的",
-					add_time:"2020-09-07 15:14:26",
-					zhaiyao:"摘要摘要士大夫即将开始的看法和精神的摘要",
-					click:0,
-					img_url:"https://images.dog.ceo/breeds/basenji/n02110806_4792.jpg",
-					sell_price:699,
-					market_price:899,
-					stock_quantity:60
-				},
-				{
-					id:3,
-					title:"山豆根山豆根公司的分为五山豆根山豆根公司的分为五",
-					add_time:"2020-09-06 15:14:26",
-					zhaiyao:"摘要摘要摘豆根山豆根公司的分为豆根山豆根公司的分为是大家看法和精神的摘要",
-					click:0,
-					img_url:"https://images.dog.ceo/breeds/terrier-scottish/n02097298_3641.jpg",
-					sell_price:215,
-					market_price:299,
-					stock_quantity:60
-				},
-			]
-		}
-	},
+
+    async getGoods() {
+      console.log(mockGoods);
+      this.goods = mockGoods;
+    },
+
+    navItemClick(item) {
+      console.log(item);
+      uni.navigateTo({
+        url: item.path,
+      });
+    },
+  },
   onLoad() {
     this.getSwipers();
-		
-		this.getGoods()
+
+    this.getGoods();
   },
 };
 </script>
@@ -162,7 +139,7 @@ export default {
     background-color: #eeeeee;
     overflow: hidden;
     margin: 10rpx 0 10rpx 0;
-		padding-bottom: 10rpx;
+    padding-bottom: 10rpx;
     .tit {
       color: $shop-color;
       height: 50rpx;
@@ -172,42 +149,6 @@ export default {
       background-color: #fff;
       margin: 6rpx 0;
     }
-	.goods_list{
-		padding: 0 15rpx;
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-		.goods_item{
-			background-color: #fff;
-			width: 355rpx;
-			padding: 15rpx;
-			box-sizing: border-box;
-			margin: 6rpx 0;
-			image{
-				width: 80%;
-				height: 150px;
-				margin: 0 auto;
-				display: block;
-			}
-			.price{
-				color: $shop-color;
-				font-size: 36rpx;
-				margin: 20rpx 0 0 0;
-				text:nth-child(2){
-					color: #ccc;
-					font-size: 28rpx;
-					margin-left: 10rpx;
-					text-decoration: line-through;
-				}
-			}
-			.name{
-				font-size: 28rpx;
-				line-height: 50rpx;
-				padding: 10rpx 0;
-			}
-		}
-	}
   }
-
 }
 </style>

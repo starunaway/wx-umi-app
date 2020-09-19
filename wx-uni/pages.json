@@ -9,6 +9,22 @@
 		},{
 			"path":"pages/news/news"
 		}
+		,{
+			"path":"pages/goods/goods",
+			"style":{
+				"navigationBarTitleText":"商品列表",
+				"enablePullDownRefresh":true
+			}
+		},{
+			"path":"pages/pics/pics"
+		},{
+			"path":"pages/videos/videos"
+		},{
+			"path":"pages/contact/contact",
+			"style":{
+				"navigationBarTitleText":"联系我们"
+			}
+		}
 		
   ],
 	"globalStyle": {
