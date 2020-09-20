@@ -1,6 +1,6 @@
 <template>
   <view class="news">
-    <newsList v-for="item in newsList" :key="item.id" :item="item"></newsList>
+    <newsList @newsItemClick="newsItemClick" v-for="item in newsList" :key="item.id" :item="item"></newsList>
   </view>
 </template>
 
@@ -21,6 +21,11 @@ export default {
       let result = this.$fetch.get('https://dog.ceo/api/breeds/image/random');
       this.newsList = mockGoods;
     },
+    newsItemClick(item) {
+      uni.navigateTo({
+        url: `/pages/newsDetail/newsDetail?id=${item.id}`,
+      });
+    },
   },
   onLoad() {
     this.getNews();
@@ -28,6 +33,4 @@ export default {
 };
 </script>
 
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>

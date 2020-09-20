@@ -1,5 +1,5 @@
 <template>
-  <view class="news-item">
+  <view class="news-item" @click="newsItemClick">
     <image :src="item.img_url" mode=""></image>
     <view class="right">
       <view class="tit">{{ item.title }}</view>
@@ -18,6 +18,11 @@ export default {
   filters: {
     formatDate(date) {
       return moment(date).format('HH:mm:ss');
+    },
+  },
+  methods: {
+    newsItemClick() {
+      this.$emit('newsItemClick', this.item);
     },
   },
 };
