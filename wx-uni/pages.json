@@ -16,7 +16,10 @@
 				"enablePullDownRefresh":true
 			}
 		},{
-			"path":"pages/pics/pics"
+			"path":"pages/pics/pics",
+			"style":{
+				"navigationBarTitleText":"社区图片"
+			}
 		},{
 			"path":"pages/videos/videos"
 		},{
