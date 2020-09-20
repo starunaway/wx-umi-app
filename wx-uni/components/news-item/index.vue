@@ -4,7 +4,7 @@
     <view class="right">
       <view class="tit">{{ item.title }}</view>
       <view class="info">
-        <text>发表时间：{{ item.add_time }}</text>
+        <text>发表时间：{{ item.add_time | formatDate }}</text>
         <text>浏览:{{ item.click }}</text>
       </view>
     </view>
@@ -12,8 +12,14 @@
 </template>
 
 <script>
+import moment from 'moment';
 export default {
   props: ['item'],
+  filters: {
+    formatDate(date) {
+      return moment(date).format('HH:mm:ss');
+    },
+  },
 };
 </script>
 
