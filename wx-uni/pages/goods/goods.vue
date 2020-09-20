@@ -1,6 +1,6 @@
 <template>
   <view class="goods_list">
-    <goodsList :goods="goods"></goodsList>
+    <goodsList :goods="goods" @goodClicked="goodClick"></goodsList>
     <view class="is-end" v-if="endFlag"> -------我是有底线的-------- </view>
   </view>
 </template>
@@ -24,6 +24,12 @@ export default {
       let result = this.$fetch.get('https://dog.ceo/api/breeds/image/random');
       this.goods = [...this.goods, ...mockGoods];
       callback && callback();
+    },
+
+    goodClick(item) {
+      uni.navigateTo({
+        url: `/pages/goodDetail/goodDetail?id=${item.id}`,
+      });
     },
   },
   onLoad() {

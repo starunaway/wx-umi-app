@@ -35,6 +35,11 @@
 				"style":{
 					"navigationBarTitleText":"资讯详情"
 				}
+			},{
+				"path":"pages/goodDetail/goodDetail",
+				"style":{
+					"navigationBarTitleText":"商品详情"
+				}
 			}
 		
 		

@@ -18,7 +18,7 @@
     <view class="hot_goods">
       <view class="tit"> 推荐商品 </view>
 
-      <goodList :goods="goods"></goodList>
+      <goodList :goods="goods" @goodClicked="goodClick"></goodList>
     </view>
   </view>
 </template>
@@ -93,6 +93,12 @@ export default {
     navItemClick(item) {
       uni.navigateTo({
         url: item.path,
+      });
+    },
+
+    goodClick(item) {
+      uni.navigateTo({
+        url: `/pages/goodDetail/goodDetail?id=${item.id}`,
       });
     },
   },

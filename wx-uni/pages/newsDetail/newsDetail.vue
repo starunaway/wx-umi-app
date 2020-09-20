@@ -25,7 +25,6 @@ export default {
     },
   },
   onLoad(options) {
-    console.log(options);
     this.getNewsDetail(options);
   },
 };
