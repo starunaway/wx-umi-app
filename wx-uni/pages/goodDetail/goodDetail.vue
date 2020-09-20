@@ -26,17 +26,61 @@
       <view class="tit">详情介绍</view>
       <rich-text class="content" :nodes="item.zhaiyao"></rich-text>
     </view>
+
+    <view class="goods-nav">
+      <uni-goods-nav
+        :fill="true"
+        :options="options"
+        :buttonGroup="buttonGroup"
+        @click="leftClick"
+        @buttonClick="rightClick"
+      />
+    </view>
   </view>
 </template>
 
 <script>
 import {mockGoods} from '../../mockData/data.js';
+import uniGoodsNav from '@/components/uni-goods-nav/uni-goods-nav.vue';
 
 export default {
+  components: {
+    uniGoodsNav,
+  },
   data() {
     return {
       swipers: [],
       item: {},
+      options: [
+        {
+          icon: 'headphones',
+          text: '客服',
+        },
+        {
+          icon: 'shop',
+          text: '店铺',
+          info: 2,
+          infoBackgroundColor: '#007aff',
+          infoColor: 'red',
+        },
+        {
+          icon: 'cart',
+          text: '购物车',
+          info: 2,
+        },
+      ],
+      buttonGroup: [
+        {
+          text: '加入购物车',
+          backgroundColor: '#ff0000',
+          color: '#fff',
+        },
+        {
+          text: '立即购买',
+          backgroundColor: '#ffa200',
+          color: '#fff',
+        },
+      ],
     };
   },
   methods: {
@@ -51,6 +95,8 @@ export default {
     getGoods(id) {
       this.item = mockGoods.filter((m) => `${m.id}` === id)[0];
     },
+    leftClick() {},
+    rightClick() {},
   },
   onLoad(options) {
     this.getSwipers(options.id);
@@ -60,7 +106,9 @@ export default {
 </script>
 
 <style lang="scss">
+$nav-height: 150px;
 .goods_detail {
+  height: calc(100% - #{$nav-height});
   swiper {
     height: 700rpx;
     image {
@@ -112,5 +160,15 @@ export default {
       font-size: 28rpx;
     }
   }
+}
+
+.goods-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+page {
+  height: 100%;
 }
 </style>
