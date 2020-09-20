@@ -12,7 +12,7 @@
 
     <scroll-view scroll-y="true" class="right">
       <view class="item" v-for="item in secondData" :key="item.id">
-        <image :src="item.img_url" mode=""></image>
+        <image :src="item.img_url" mode="" @click="previewImg"></image>
         <text>{{ item.title }}</text>
       </view>
     </scroll-view>
@@ -41,6 +41,12 @@ export default {
       this.active = index;
       this.secondData = mockGoods;
     },
+		previewImg(){
+			uni.previewImage({
+				current:mockGoods[1].img_url,
+				urls:mockGoods.map(d => d.img_url)
+			})
+		}
   },
   onLoad() {
     this.getPicsCategory();

@@ -7,7 +7,10 @@
 		},{
 			"path":"pages/member/member"
 		},{
-			"path":"pages/news/news"
+			"path":"pages/news/news",
+			"style":{
+				"navigationBarTitleText":"资讯"
+			}
 		}
 		,{
 			"path":"pages/goods/goods",

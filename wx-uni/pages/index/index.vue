@@ -87,12 +87,10 @@ export default {
     },
 
     async getGoods() {
-      console.log(mockGoods);
       this.goods = mockGoods;
     },
 
     navItemClick(item) {
-      console.log(item);
       uni.navigateTo({
         url: item.path,
       });
