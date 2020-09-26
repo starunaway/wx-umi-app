@@ -106,6 +106,17 @@ export default {
     this.getSwipers();
 
     this.getGoods();
+		
+		uniCloud.callFunction({
+			name:'login',
+			data:{
+				password:"1213",
+				username:"1212414"
+			},
+			success: (data) => {
+				console.log("clould success",data);
+			}
+		})
   },
 };
 </script>
